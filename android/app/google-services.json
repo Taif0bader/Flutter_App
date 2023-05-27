@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "574495575122",
+    "project_id": "flutter-ecommerce-app-7e247",
+    "storage_bucket": "flutter-ecommerce-app-7e247.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:574495575122:android:a9c64f14fa81d3ff38638b",
+        "android_client_info": {
+          "package_name": "com.example.wahaj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "574495575122-3p0j09tuo9urf997ou4ku4q5o0pp7gtp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoPmidqfvBQRCrD0z4GAhMI-6K91cOkwc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "574495575122-3p0j09tuo9urf997ou4ku4q5o0pp7gtp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
