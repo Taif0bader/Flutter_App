@@ -13,13 +13,17 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return AppBar(
       backgroundColor: Colors.transparent,
       elevation: 0,
+
       automaticallyImplyLeading: automaticallyImplyLeading,
+
       title: Container(
-        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-        color: Colors.white,
+        //padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+        //color: Colors.black,
+
         child: Text(
           title,
           style: Theme.of(context)
@@ -27,18 +31,19 @@ class CustomAppBar extends StatelessWidget with PreferredSizeWidget {
               .headline2!
               .copyWith(color: Color(0xFF94B49F)),
         ),
-      ),
-      iconTheme: IconThemeData(color: Colors.black),
+
+
+      ),centerTitle: true,
+
+      iconTheme: IconThemeData(color: Color(0xFF94B49F),size: 30),
+
       actions: [
-        IconButton(
-          icon: Icon(Icons.favorite),
-          onPressed: () {
-            Navigator.pushNamed(
-              context,
-              '/wishlist',
-            );
-          },
-        ),
+
+           //padding: EdgeInsets.all(20),
+           Padding(
+             padding: const EdgeInsets.only(right: 15.0),
+             child: Image.asset('assets/wahajs.png',scale: 0.6),
+           ),
       ],
     );
   }

@@ -50,7 +50,7 @@ class OrderSummary extends StatelessWidget {
                     height: 60,
                     alignment: Alignment.bottomCenter,
                     decoration: BoxDecoration(
-                      color: Colors.black.withAlpha(50),
+                      //color: Colors.black.withAlpha(50),
                     ),
                   ),
                   Container(
@@ -58,7 +58,8 @@ class OrderSummary extends StatelessWidget {
                     width: MediaQuery.of(context).size.width - 10,
                     height: 50,
                     decoration: BoxDecoration(
-                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(16.0),
+                      color: Color(0xFF94B49F),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 20.0),

@@ -7,3 +7,4 @@ export 'splash/splash_screen.dart';
 export 'checkout/checkout_screen.dart';
 export 'order_confirmation/order_confirmation_screen.dart';
 export 'payment_selection/payment_selection_screen.dart';
+export 'package:wahaj/screens/myProfile.dart';

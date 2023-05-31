@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wahaj/colors.dart';
 
 import '../../blocs/cart/cart.state.dart';
 import '/blocs/blocs.dart';
@@ -35,7 +36,7 @@ class CartScreen extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.symmetric(
                 horizontal: 10.0,
-                vertical: 5.0,
+                vertical: 10.0,
               ),
               child: Column(
                 children: [
@@ -51,8 +52,10 @@ class CartScreen extends StatelessWidget {
                           Navigator.pushNamed(context, '/');
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.black,
-                          shape: RoundedRectangleBorder(),
+                          primary: Colors.grey.withAlpha(80),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16.0),
+                          ),
                           elevation: 0,
                         ),
                         child: Text(
@@ -60,7 +63,7 @@ class CartScreen extends StatelessWidget {
                           style: Theme.of(context)
                               .textTheme
                               .headline5!
-                              .copyWith(color: Colors.white),
+                              .copyWith(color: primary[500]),
                         ),
                       ),
                     ],

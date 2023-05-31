@@ -74,7 +74,7 @@ class HomeScreen extends StatelessWidget {
                 }
               },
             ),
-            SectionTitle(title: 'MOST POPULAR'),
+            SectionTitle(title: 'MOST POPULAR',),
             BlocBuilder<ProductBloc, ProductState>(
               builder: (context, state) {
                 if (state is ProductLoading) {

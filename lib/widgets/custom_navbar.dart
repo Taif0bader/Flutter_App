@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wahaj/colors.dart';
 
 import '../blocs/cart/cart.state.dart';
 import '/widgets/widgets.dart';
@@ -22,9 +23,9 @@ class CustomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      color: Colors.black,
+      color: Color(0xFFFF2F0F0),
       child: Container(
-        height: 70,
+        height: 65,
         child: (screen == '/product')
             ? AddToCartNavBar(product: product!)
             : (screen == '/cart')
@@ -49,19 +50,22 @@ class HomeNavBar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         IconButton(
-          icon: Icon(Icons.home, color: Colors.white),
+          icon: Icon(Icons.home, color:Color(0xFF94B49F),size: 27),
           onPressed: () {
             Navigator.pushNamed(context, '/');
           },
         ),
         IconButton(
-          icon: Icon(Icons.shopping_cart, color: Colors.white),
+          icon: Icon(Icons.shopping_cart, color:Color(0xFF94B49F),size: 25),
           onPressed: () {
             Navigator.pushNamed(context, '/cart');
           },
         ),
+        IconButton( icon: Icon(Icons.favorite,color: Color(0xFF94B49F),size: 27,),onPressed:() {
+          Navigator.pushNamed(context, '/wishlist');
+        }),
         IconButton(
-          icon: Icon(Icons.person, color: Colors.white),
+          icon: Icon(Icons.person, color: Color(0xFF94B49F),size: 29),
           onPressed: () {
             Navigator.pushNamed(context, '/user');
           },
@@ -85,7 +89,7 @@ class AddToCartNavBar extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         IconButton(
-          icon: Icon(Icons.share, color: Colors.white),
+          icon: Icon(Icons.share, color: Color(0xFF94B49F),size: 30,),
           onPressed: () {},
         ),
         BlocBuilder<WishlistBloc, WishlistState>(
@@ -95,7 +99,7 @@ class AddToCartNavBar extends StatelessWidget {
             }
             if (state is WishlistLoaded) {
               return IconButton(
-                icon: Icon(Icons.favorite, color: Colors.white),
+                icon: Icon(Icons.favorite, color: Color(0xFF94B49F),size: 30,),
                 onPressed: () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
@@ -124,7 +128,10 @@ class AddToCartNavBar extends StatelessWidget {
                 },
                 style: ElevatedButton.styleFrom(
                   primary: Colors.white,
-                  shape: RoundedRectangleBorder(),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16.0),
+
+                  ),
                 ),
                 child: Text(
                   'ADD TO CART',
@@ -157,7 +164,9 @@ class GoToCheckoutNavBar extends StatelessWidget {
           },
           style: ElevatedButton.styleFrom(
             primary: Colors.white,
-            shape: RoundedRectangleBorder(),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16.0),
+            ),
           ),
           child: Text(
             'GO TO CHECKOUT',

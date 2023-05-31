@@ -1,5 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:wahaj/colors.dart';
 import '/models/models.dart';
 import '/widgets/widgets.dart';
 
@@ -49,15 +50,18 @@ class ProductScreen extends StatelessWidget {
                       height: 60,
                       alignment: Alignment.bottomCenter,
                       decoration: BoxDecoration(
-                        color: Colors.black.withAlpha(50),
+                        borderRadius: BorderRadius.circular(10.0),
+                        color: Colors.grey.withAlpha(50),
                       ),
                     ),
                     Container(
+
                       margin: EdgeInsets.all(5.0),
                       width: MediaQuery.of(context).size.width - 10,
                       height: 50,
                       decoration: BoxDecoration(
-                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(20.0),
+                        //color:Color(0xFF94B49F),
                       ),
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -70,14 +74,14 @@ class ProductScreen extends StatelessWidget {
                               style: Theme.of(context)
                                   .textTheme
                                   .headline5!
-                                  .copyWith(color: Colors.white),
+                                  .copyWith(color: primary[900]),
                             ),
                             Text(
                               '\$${product.price}',
                               style: Theme.of(context)
                                   .textTheme
                                   .headline5!
-                                  .copyWith(color: Colors.white),
+                                  .copyWith(color:primary[900]),
                             ),
                           ],
                         ),
@@ -108,7 +112,12 @@ class ProductScreen extends StatelessWidget {
                   children: <Widget>[
                     ListTile(
                       title: Text(
-                        'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.',
+                        'An estimated delivery time will be provided to you once your order is placed.''Delivery times are estimates and commence from the date of shipping, rather than the date of order.'
+                            ' Delivery times are to be used as a guide only and are subject to the acceptance and approval of your order. '
+                            'Unless there are exceptional circumstances, we make every effort to fulfill your order within [15] business days of the '
+                            'date of your order. Business day mean Monday to Friday, except holidays.'
+                            'Please note we do not ship on [Sundays].Date of delivery may vary due to carrier shipping practices, delivery location, method of delivery, and the '
+                            'items ordered. Products may also be delivered in separate shipments.',
                         style: Theme.of(context).textTheme.bodyText1,
                       ),
                     )

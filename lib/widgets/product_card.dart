@@ -16,8 +16,8 @@ class ProductCard extends StatelessWidget {
     this.isWishlist = false,
     this.isCart = false,
     this.isSummary = false,
-    this.iconColor = Colors.white,
-    this.fontColor = Colors.white,
+    this.iconColor = Colors.white70,
+    this.fontColor = Colors.black,
   }) : super(key: key);
 
   const ProductCard.wishlist({
@@ -25,13 +25,13 @@ class ProductCard extends StatelessWidget {
     required this.product,
     this.quantity,
     this.widthFactor = 1.1,
-    this.height = 150,
+    this.height = 250,
     this.isCatalog = false,
     this.isWishlist = true,
     this.isCart = false,
     this.isSummary = false,
-    this.iconColor = Colors.white,
-    this.fontColor = Colors.white,
+    this.iconColor = Colors.white70,
+    this.fontColor = Colors.black,
   }) : super(key: key);
 
   const ProductCard.cart({
@@ -39,7 +39,7 @@ class ProductCard extends StatelessWidget {
     required this.product,
     this.quantity,
     this.widthFactor = 2.25,
-    this.height = 80,
+    this.height = 150,
     this.isCatalog = false,
     this.isWishlist = false,
     this.isCart = true,
@@ -53,7 +53,7 @@ class ProductCard extends StatelessWidget {
     required this.product,
     this.quantity,
     this.widthFactor = 2.25,
-    this.height = 80,
+    this.height = 150,
     this.isCatalog = false,
     this.isWishlist = false,
     this.isCart = false,
@@ -118,6 +118,7 @@ class ProductCard extends StatelessWidget {
           ],
         ),
       )
+
           : Stack(
         alignment: Alignment.bottomCenter,
         children: [
@@ -125,6 +126,7 @@ class ProductCard extends StatelessWidget {
             adjWidth: adjWidth,
             height: height,
             product: product,
+
           ),
           ProductBackground(
             adjWidth: adjWidth,
@@ -165,9 +167,11 @@ class ProductImage extends StatelessWidget {
     return Container(
       width: adjWidth,
       height: height,
+        child: ClipRRect(
+        borderRadius: BorderRadius.circular(20.0),
       child: Image.network(
         product.imageUrl,
-        fit: BoxFit.cover,
+        fit: BoxFit.cover,),
       ),
     );
   }
@@ -197,13 +201,13 @@ class ProductInformation extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              width: 85,
+              width: 115,
               child: Text(
                 product.name,
                 maxLines: 1,
                 style: Theme.of(context)
                     .textTheme
-                    .headline5!
+                    .headline4!
                     .copyWith(color: fontColor),
               ),
             ),
@@ -340,19 +344,23 @@ class ProductBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: adjWidth - 10,
-      height: 80,
-      margin: const EdgeInsets.only(bottom: 5),
-      alignment: Alignment.bottomCenter,
-      decoration: BoxDecoration(color: Colors.black.withAlpha(50)),
+      width: adjWidth - 5,
+      height: 50,
+      margin: const EdgeInsets.only(bottom: 0),
+     // alignment: Alignment.bottomCenter,
+      decoration: BoxDecoration(borderRadius: BorderRadius.only(
+          bottomLeft: Radius.circular(15.0),
+          bottomRight: Radius.circular(15.0)),color: Colors.black.withAlpha(40)),
       child: Container(
-        width: adjWidth - 20,
-        height: 70,
-        margin: const EdgeInsets.only(bottom: 5),
-        alignment: Alignment.bottomCenter,
-        decoration: BoxDecoration(color: Colors.black),
+        width: adjWidth - 1,
+        height: 80,
+        margin: const EdgeInsets.only(bottom: 0),
+        //alignment: Alignment.bottomCenter,
+        decoration: BoxDecoration(borderRadius: BorderRadius.only(
+        bottomLeft: Radius.circular(15.0), bottomRight: Radius.circular(15.0)),
+            color: Colors.grey.withAlpha(70)),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(3.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [...widgets],

@@ -29,10 +29,10 @@ class WishlistScreen extends StatelessWidget {
             }
             if (state is WishlistLoaded) {
               return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                padding: const EdgeInsets.symmetric(horizontal: 2.0),
                 child: GridView.builder(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 8.0, vertical: 16.0),
+                      horizontal: 0.8, vertical: 16.0),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 1,
                     childAspectRatio: 2.25,

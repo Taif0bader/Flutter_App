@@ -94,7 +94,9 @@ class CheckoutScreen extends StatelessWidget {
                   Container(
                     height: 60,
                     alignment: Alignment.bottomCenter,
-                    decoration: BoxDecoration(color: Colors.black),
+                    decoration: BoxDecoration(color: Color(0xFF94B49F),
+                    borderRadius: BorderRadius.circular(16.0),
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [

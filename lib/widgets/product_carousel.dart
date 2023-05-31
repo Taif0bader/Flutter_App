@@ -19,12 +19,13 @@ class ProductCarousel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.topLeft,
+
       child: SizedBox(
-        height: 165,
+        height: 172,
         child: ListView.builder(
           shrinkWrap: true,
           padding: const EdgeInsets.symmetric(
-            horizontal: 15.0,
+            horizontal: 10.0,
             vertical: 10.0,
           ),
           scrollDirection: Axis.horizontal,
@@ -32,10 +33,12 @@ class ProductCarousel extends StatelessWidget {
           itemBuilder: (context, index) {
             return Padding(
               padding: const EdgeInsets.only(right: 6.0),
+
               child: ProductCard.catalog(product: products[index]),
             );
           },
         ),
+
       ),
     );
   }

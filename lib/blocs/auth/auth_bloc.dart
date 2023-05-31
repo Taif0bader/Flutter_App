@@ -7,10 +7,11 @@ import 'package:firebase_auth/firebase_auth.dart';
 import '../../models/models.dart';
 //import '../../models/user_model.dart';
 import '/repositories/repositories.dart';
+import 'auth.state.dart';
 
 
 part 'auth_event.dart';
-part 'auth.state.dart';
+//part 'auth.state.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
   final AuthRepository _authRepository;
@@ -29,12 +30,12 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
     _authUserSubscription = _authRepository.user.listen((authUser) {
       print('Auth user: $authUser');
       //if (authUser != null) {
-        //_userRepository.getUser(authUser.uid).listen((user) {
-          //add(AuthUserChanged(authUser: authUser, user: user));
-        //});
-     // } else {
-       // add(AuthUserChanged(authUser: authUser));
-     // }
+      //_userRepository.getUser(authUser.uid).listen((user) {
+      //add(AuthUserChanged(authUser: authUser, user: user));
+      //});
+      // } else {
+      // add(AuthUserChanged(authUser: authUser));
+      // }
     });
   }
 

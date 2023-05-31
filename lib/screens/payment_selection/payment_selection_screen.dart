@@ -28,7 +28,7 @@ class PaymentSelection extends StatelessWidget {
           if (state is PaymentLoading) {
             return Center(
               child: CircularProgressIndicator(
-                color: Colors.black,
+                color: Color(0xFF94B49F),
               ),
             );
           }
@@ -63,16 +63,28 @@ class PaymentSelection extends StatelessWidget {
                   },
                 )
                     : SizedBox(),
-                ElevatedButton(
-                  onPressed: () {
-                    context.read<PaymentBloc>().add(
-                      SelectPaymentMethod(
-                          paymentMethod: PaymentMethod.credit_card),
-                    );
-                    Navigator.pop(context);
-                  },
-                  child: Text('Pay with Credit Card'),
-                ),
+          ElevatedButton(
+          style: ElevatedButton.styleFrom(
+          backgroundColor: Color(0xFF94B49F),
+          shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(75.0)),
+          ),
+          onPressed: () {
+          context.read<PaymentBloc>().add(
+          SelectPaymentMethod(
+          paymentMethod: PaymentMethod.credit_card),
+          );
+          Navigator.pop(context);
+          },
+          child: Text(
+          'Pay with Credit Card',
+          style: TextStyle(
+          fontSize: 20,
+          fontWeight: FontWeight.w400,
+          ),
+          ),
+          ),
+
               ],
             );
           } else {

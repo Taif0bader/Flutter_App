@@ -23,7 +23,7 @@ TextTheme textTheme() {
     headline3: TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.bold,
-      fontSize: 18,
+      fontSize: 20,
     ),
     headline4: TextStyle(
       color: Colors.black,
@@ -33,18 +33,18 @@ TextTheme textTheme() {
     headline5: TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.bold,
-      fontSize: 14,
+      fontSize: 18,
     ),
     headline6: TextStyle(
       color: Colors.black,
-      fontWeight: FontWeight.normal,
-      fontSize: 14,
+      fontWeight: FontWeight.bold,
+      fontSize: 12,
     ),
     bodyText1: TextStyle(
       color: Colors.black,
-      fontWeight: FontWeight.normal,
+      fontWeight: FontWeight.bold,
       height: 1.75,
-      fontSize: 12,
+      fontSize: 14,
     ),
     bodyText2: TextStyle(
       color: Colors.black,
